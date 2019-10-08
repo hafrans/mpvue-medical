@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "景点门票",
+    "usingComponents": {
+        "van-button": "/static/vant/button/index",
+        "van-swipe": "/static/vant/swipe-cell/index",
+        "van-search": "/static/vant/search/index",
+        "van-icon": "/static/vant/icon/index"
+    }
+}

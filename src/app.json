@@ -1,44 +1,65 @@
 {
-  "pages": [
-    "pages/index/main",
-    "pages/logs/main",
-    "pages/counter/main"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "color": "#999",
-    "backgroundColor": "#fafafa",
-    "selectedColor": "#333",
-    "borderStyle": "white",
+    "pages": [
+        "pages/home/main",
+        "pages/search/main",
+        "pages/spot/main",
+        "pages/hotel/main",
+        "pages/index/main",
+        "pages/logs/main",
+        "pages/counter/main"
 
-    "list": [{
-      "text": "首页",
-      "pagePath": "pages/index/main",
-      "iconPath": "static/tabs/home.png",
-      "selectedIconPath": "static/tabs/home-active.png"
-    }, {
-      "text": "订单",
-      "pagePath": "pages/logs/main",
-      "iconPath": "static/tabs/orders.png",
-      "selectedIconPath": "static/tabs/orders-active.png"
-    }],
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "智慧小镇",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#999",
+        "backgroundColor": "#fafafa",
+        "selectedColor": "#409EFF",
+        "borderStyle": "white",
 
-    "items": [{
-      "name": "首页",
-      "pagePath": "pages/index/main",
-      "icon": "static/tabs/home.png",
-      "activeIcon": "static/tabs/home-active.png"
-    }, {
-      "name": "订单",
-      "pagePath": "pages/logs/main",
-      "icon": "static/tabs/orders.png",
-      "activeIcon": "static/tabs/orders-active.png"
-    }],
-    "position": "bottom"
-  }
+        "list": [{
+                "text": "首页",
+                "pagePath": "pages/home/main",
+                "iconPath": "static/tabs/home.png",
+                "selectedIconPath": "static/tabs/home-active.png"
+            },
+            {
+                "text": "订单",
+                "pagePath": "pages/index/main",
+                "iconPath": "static/tabs/order.png",
+                "selectedIconPath": "static/tabs/order-active.png"
+            },
+            {
+                "text": "我的",
+                "pagePath": "pages/logs/main",
+                "iconPath": "static/tabs/user.png",
+                "selectedIconPath": "static/tabs/user-active.png"
+            }
+        ],
+
+        "items": [{
+                "name": "首页",
+                "pagePath": "pages/home/main",
+                "icon": "static/tabs/home.png",
+                "activeIcon": "static/tabs/home-active.png"
+            },
+            {
+                "text": "订单",
+                "pagePath": "pages/index/main",
+                "iconPath": "static/tabs/order.png",
+                "selectedIconPath": "static/tabs/order-active.png"
+            },
+            {
+                "name": "我的",
+                "pagePath": "pages/logs/main",
+                "icon": "static/tabs/user.png",
+                "activeIcon": "static/tabs/user-active.png"
+            }
+        ],
+        "position": "bottom"
+    }
 }
