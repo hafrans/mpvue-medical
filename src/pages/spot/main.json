@@ -4,6 +4,8 @@
         "van-button": "/static/vant/button/index",
         "van-swipe": "/static/vant/swipe-cell/index",
         "van-search": "/static/vant/search/index",
-        "van-icon": "/static/vant/icon/index"
+        "van-icon": "/static/vant/icon/index",
+        "van-card": "/static/vant/card/index",
+        "van-divider": "/static/vant/divider/index"
     }
 }

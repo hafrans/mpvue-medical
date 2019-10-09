@@ -43,16 +43,18 @@
     </div>
     <div class="divider"></div>
     <div class="main">
+      <van-divider contentPosition="center">推荐</van-divider>
       <div class="recommend-list">
         <block v-for="(item, index) in recommendInfo" :key="index">
              <div class="recommend" @click="handleRecommend">
                <van-card
-                num="2"
+                thumb-mode="aspectFill"
                 :price="item.price"
                 :desc="item.desc"
                 :title="item.title"
-                :thumb="item.imageURL"
+                :thumb="item.imageUrl"
               />
+              <van-divider />
              </div>
         </block>
       </div>
@@ -84,6 +86,10 @@ export default {
         {type: 'new', color: '#efefef', src: '/static/images/hotel1.jpeg', url: '../hotel/main'},
       ],
       recommendInfo: [
+        {title: '食肉兽', desc: '烤肉酒馆', price: '100.00', imageUrl: '/static/images/food1.jpeg'},
+        {title: '本家', desc: '白种元韩餐', price: '120.00', imageUrl: '/static/images/hotel1.jpeg'},
+        {title: '食肉兽', desc: '烤肉酒馆', price: '100.00', imageUrl: '/static/images/food1.jpeg'},
+        {title: '本家', desc: '白种元韩餐', price: '120.00', imageUrl: '/static/images/hotel1.jpeg'},
         {title: '食肉兽', desc: '烤肉酒馆', price: '100.00', imageUrl: '/static/images/food1.jpeg'},
         {title: '本家', desc: '白种元韩餐', price: '120.00', imageUrl: '/static/images/hotel1.jpeg'},
       ],
@@ -171,5 +177,25 @@ export default {
   }
 }
 
-
+.recommend-list /deep/ .van-card{
+  background-color: #fff;
+  font-size: 28rpx;
+  padding: 0rpx 10rpx;
+  .van-card__img{
+  border-radius: 10rpx;
+}
+.van-card__title{
+  font-size: 36rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-weight: 600;
+  color: #4f4f4f;
+}
+.van-card__desc{
+  height: 90rpx;
+}
+.van-card__bottom{
+  font-size: 36rpx;
+}
+}
 </style>
