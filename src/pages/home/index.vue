@@ -47,14 +47,10 @@
       <div class="recommend-list">
         <block v-for="(item, index) in recommendInfo" :key="index">
              <div class="recommend" @click="handleRecommend">
-               <van-card
-                thumb-mode="aspectFill"
-                :price="item.price"
-                :desc="item.desc"
-                :title="item.title"
-                :thumb="item.imageUrl"
-              />
-              <van-divider />
+              <brandItem :item="item" />
+              <div v-if="index < recommendInfo.length-1">
+                <van-divider />
+              </div>
              </div>
         </block>
       </div>
@@ -63,6 +59,8 @@
 </template>
 
 <script>
+import brandItem from '../../components/brandItem.vue'
+
 export default {
   data() {
     return {
@@ -86,17 +84,18 @@ export default {
         {type: 'new', color: '#efefef', src: '/static/images/hotel1.jpeg', url: '../hotel/main'},
       ],
       recommendInfo: [
-        {title: '食肉兽', desc: '烤肉酒馆', price: '100.00', imageUrl: '/static/images/food1.jpeg'},
-        {title: '本家', desc: '白种元韩餐', price: '120.00', imageUrl: '/static/images/hotel1.jpeg'},
-        {title: '食肉兽', desc: '烤肉酒馆', price: '100.00', imageUrl: '/static/images/food1.jpeg'},
-        {title: '本家', desc: '白种元韩餐', price: '120.00', imageUrl: '/static/images/hotel1.jpeg'},
-        {title: '食肉兽', desc: '烤肉酒馆', price: '100.00', imageUrl: '/static/images/food1.jpeg'},
-        {title: '本家', desc: '白种元韩餐', price: '120.00', imageUrl: '/static/images/hotel1.jpeg'},
-      ],
-    };
+        {id: '30', name: '东夷客栈', category: 3, type: 1, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/food1.jpeg'},
+        {id: '10', name: 'Tomacado花厨', category: 1, type: 2, avgPrice: '120.00', score: '5', headIcon: '/static/images/hotel1.jpeg'},
+        {id: '07', name: '东夷海洋馆', category: 0, type: 1, avgPrice: '100.00', score: '3.5', headIcon: '/static/images/food1.jpeg'},
+        {id: '11', name: '胖哥俩蟹肉煲', category: 1, type: 0, avgPrice: '120.00', score: '3', headIcon: '/static/images/hotel1.jpeg'},
+        {id: '12', name: '宽板凳火锅', category: 1, type: 3, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/food1.jpeg'},
+        {id: '20', name: '悦湾大酒店', category: 2, type: 1, avgPrice: '120.00', score: '2.5', headIcon: '/static/images/hotel1.jpeg'},
+      ]
+    }
   },
-
-  components: {},
+  components: {
+    brandItem
+  },
 
   methods: {
     handleSearch() {
@@ -111,10 +110,6 @@ export default {
 </script>
 <style lang="less" scoped>
 @import '../../style/base.less';
-.search{
-    margin-left: -30rpx;
-    width: 109%;
-  }
 .slide-image {
   width: 100%;
   height: 300rpx;
@@ -136,11 +131,6 @@ export default {
 .nav-title{
   color: #4f4f4f;
   font-size: 28rpx;
-}
-.divider{
-  background: #efefef;
-  width: 100%;
-  height: 15rpx;
 }
 .hot-new-list{
   margin-top: 20rpx;
@@ -175,27 +165,5 @@ export default {
     align-items: center;
     margin-right: 20rpx;
   }
-}
-
-.recommend-list /deep/ .van-card{
-  background-color: #fff;
-  font-size: 28rpx;
-  padding: 0rpx 10rpx;
-  .van-card__img{
-  border-radius: 10rpx;
-}
-.van-card__title{
-  font-size: 36rpx;
-  height: 40rpx;
-  line-height: 40rpx;
-  font-weight: 600;
-  color: #4f4f4f;
-}
-.van-card__desc{
-  height: 90rpx;
-}
-.van-card__bottom{
-  font-size: 36rpx;
-}
 }
 </style>

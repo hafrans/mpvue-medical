@@ -17,7 +17,43 @@ export function formatTime (date) {
 
   return `${t1} ${t2}`
 }
-
+// 封装Ajax
+export function Ajax (opts, cb = function(){}) {
+  wx.showLoading({title: '请求中...', mask: true})
+  const {url, type = 'GET', params = {}} = opts
+  return new Promise((resolve, reject) => {
+    wx.request({
+      url,
+      data: params,
+      method: type,
+      header: {"content-type": "application/json"},
+      success(res) {
+        resolve(res)
+      },
+      fail(err) {
+        reject(err)
+      },
+      complete(res) {
+        setTimeout(() => {
+          wx.hideLoading()
+          cb && cb(res)
+        }, 1000)
+      }
+    })
+  })
+}
+// 打开新窗口
+export function openWin (url) {
+  wx.navigateTo({url: url})
+}
+// 关闭当前页面，跳转到应用内的某个页面
+export function redirectTo (url) {
+  wx.redirectTo({url: url})
+}
+// 返回上一级窗口
+export function backBeforeWin () {
+  wx.navigateBack({delta: 1})
+}
 export default {
   formatNumber,
   formatTime

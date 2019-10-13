@@ -58,11 +58,6 @@ export default {
 </script>
 <style lang="less" scoped>
 @import '../../style/base.less';
-  .search{
-    margin-left: -30rpx;
-    margin-bottom: 30rpx;
-    width: 105%;
-  }
   .record{
     margin-bottom: 30rpx;
   }

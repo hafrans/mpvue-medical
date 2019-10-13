@@ -3,6 +3,8 @@
         "pages/home/main",
         "pages/search/main",
         "pages/spot/main",
+        "pages/productDetail/main",
+        "pages/brandAlbum/main",
         "pages/hotel/main",
         "pages/index/main",
         "pages/logs/main",
