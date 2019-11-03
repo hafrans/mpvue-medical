@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "用户评价",
+  "usingComponents": {
+      "van-icon": "/static/vant/icon/index",
+      "van-card": "/static/vant/card/index",
+      "van-divider": "/static/vant/divider/index",
+      "van-rate": "/static/vant/rate/index",
+      "van-grid": "/static/vant/grid/index",
+      "van-grid-item": "/static/vant/grid-item/index",
+      "van-cell": "/static/vant/cell/index",
+      "van-tabs": "/static/vant/tabs/index",
+      "van-tab": "/static/vant/tab/index"
+  }
+}

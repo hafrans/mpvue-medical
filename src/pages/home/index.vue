@@ -1,8 +1,8 @@
 <template>
   <div class="wrap">
     <div class="main">
-      <div class="search">
-       <van-search placeholder="请输入搜索关键词" @click="handleSearch" shape="round" placeholder-style="text-align: center"></van-search>
+      <div class="search" @click="handleSearch">
+       <van-search placeholder="请输入搜索关键词"  shape="round" placeholder-style="text-align: center"></van-search>
     </div>
     <swiper
       class="swiper"
@@ -46,12 +46,8 @@
       <van-divider contentPosition="center">推荐</van-divider>
       <div class="recommend-list">
         <block v-for="(item, index) in recommendInfo" :key="index">
-             <div class="recommend" @click="handleRecommend">
-              <brandItem :item="item" />
-              <div v-if="index < recommendInfo.length-1">
-                <van-divider />
-              </div>
-             </div>
+            <brandItem :item="item" />
+            <van-divider />
         </block>
       </div>
     </div> 
@@ -65,9 +61,9 @@ export default {
   data() {
     return {
       bannerUrl: [
-        { url: "/static/images/banner0.jpg" },
-        { url: "/static/images/banner1.jpg" },
-        { url: "/static/images/banner2.jpg" }
+        { url: "/static/images/town1.jpg" },
+        { url: "/static/images/town2.jpg" },
+        { url: "/static/images/town3.jpg" }
       ],
       navInfo: [
         {type: 'send-gift', title: '景点门票', color: '#409EFF', url: '../spot/main'},
@@ -81,15 +77,15 @@ export default {
       ],
        hotNewInfo: [
         {type: 'hot', color: '#efefef', src: '/static/images/food1.jpeg', url: '../spot/main'},
-        {type: 'new', color: '#efefef', src: '/static/images/hotel1.jpeg', url: '../hotel/main'},
+        {type: 'new', color: '#efefef', src: '/static/images/beach1.jpeg', url: '../hotel/main'},
       ],
       recommendInfo: [
-        {id: '30', name: '东夷客栈', category: 3, type: 1, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/food1.jpeg'},
-        {id: '10', name: 'Tomacado花厨', category: 1, type: 2, avgPrice: '120.00', score: '5', headIcon: '/static/images/hotel1.jpeg'},
-        {id: '07', name: '东夷海洋馆', category: 0, type: 1, avgPrice: '100.00', score: '3.5', headIcon: '/static/images/food1.jpeg'},
-        {id: '11', name: '胖哥俩蟹肉煲', category: 1, type: 0, avgPrice: '120.00', score: '3', headIcon: '/static/images/hotel1.jpeg'},
-        {id: '12', name: '宽板凳火锅', category: 1, type: 3, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/food1.jpeg'},
-        {id: '20', name: '悦湾大酒店', category: 2, type: 1, avgPrice: '120.00', score: '2.5', headIcon: '/static/images/hotel1.jpeg'},
+        {id: '30', name: '东夷客栈', category: 2, type: 1, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/kezhan.jpg'},
+        {id: '10', name: 'Tomacado花厨', category: 4, type: 2, avgPrice: '120.00', score: '3.5', headIcon: '/static/images/westfood.jpeg'},
+        {id: '07', name: '东夷海洋馆', category: 0, type: 1, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/sea1.jpg'},
+        {id: '11', name: '胖哥俩蟹肉煲', category: 4, type: 0, avgPrice: '120.00', score: '3', headIcon: '/static/images/pangfood.jpg'},
+        {id: '12', name: '宽板凳火锅', category: 4, type: 3, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/hotpot.jpg'},
+        {id: '20', name: '悦湾大酒店', category: 2, type: 1, avgPrice: '120.00', score: '2.5', headIcon: '/static/images/hotel3.jpeg'},
       ]
     }
   },

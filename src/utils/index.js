@@ -7,16 +7,33 @@ export function formatTime (date) {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const day = date.getDate()
-
   const hour = date.getHours()
   const minute = date.getMinutes()
   const second = date.getSeconds()
 
   const t1 = [year, month, day].map(formatNumber).join('/')
   const t2 = [hour, minute, second].map(formatNumber).join(':')
-
   return `${t1} ${t2}`
 }
+
+export function formatDate (date) {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+
+  const t1 = [year, month, day].map(formatNumber).join('-')
+  return t1
+}
+
+export function formatDateAdd (date, addDay) {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate() + addDay
+
+  const t1 = [year, month, day].map(formatNumber).join('-')
+  return t1
+}
+
 // 封装Ajax
 export function Ajax (opts, cb = function(){}) {
   wx.showLoading({title: '请求中...', mask: true})

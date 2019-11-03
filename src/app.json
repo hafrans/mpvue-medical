@@ -3,10 +3,17 @@
         "pages/home/main",
         "pages/search/main",
         "pages/spot/main",
-        "pages/productDetail/main",
+        "pages/brandDetail/main",
         "pages/brandAlbum/main",
-        "pages/hotel/main",
+        "pages/userComment/main",
+        "pages/makeComment/main",
         "pages/index/main",
+        "pages/myStar/main",
+        "pages/myAddress/main",
+        "pages/order/main",
+        "pages/orderDetail/main",
+        "pages/makeOrder/main",
+        "pages/hotel/main",
         "pages/logs/main",
         "pages/counter/main"
 
@@ -31,13 +38,13 @@
             },
             {
                 "text": "订单",
-                "pagePath": "pages/index/main",
+                "pagePath": "pages/order/main",
                 "iconPath": "static/tabs/order.png",
                 "selectedIconPath": "static/tabs/order-active.png"
             },
             {
                 "text": "我的",
-                "pagePath": "pages/logs/main",
+                "pagePath": "pages/index/main",
                 "iconPath": "static/tabs/user.png",
                 "selectedIconPath": "static/tabs/user-active.png"
             }

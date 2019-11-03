@@ -21,13 +21,11 @@
           </div>  
         </div>
         <div class="option">
-          <button open-type="share"  class="option-item share" @click="handleShare">
+          <button open-type="share"  class="option-item share">
             <van-icon name="share" size="20"/>
-            <p class="option-name share-name">分享</p>
           </button>
-          <div class="option-item star">
-            <van-icon name="star-o" :color="starColor[collected]" size="20"/>
-            <p class="option-name">{{collected === 0 ? '收藏' : '已收藏'}}</p>
+          <div class="option-item star" @click="handleStar">
+            <van-icon :name="starName[collected]" :color="starColor[collected]" size="20"/>
           </div>
         </div>
       </div>
@@ -37,7 +35,7 @@
           <van-icon name="map-marked" size="20px" color="#afafaf"/>
           <div class="address-detail">{{detail.address}}</div>
         </div>
-        <div class="contact">
+        <div class="contact" @click="handlePhone">
           <van-icon name="phone" size="20px" color="#F90"/>
         </div>
       </div>
@@ -45,33 +43,53 @@
 </template>
 
 <script>
-import { brandType } from '../constants/index'
+// import { brandType } from '../constants/index'
 export default {
   props: ['detail'],
   data() {
     return {
-      brandType,
+      starColor: ['#4f4f4f', '#F90'],
+      starName: ["star-o", "star"],
+      collected: 0,
     }
   },
   methods: {
-    getDetail(category, id) {
+    goBrandAlbum(category, id) {
       wx.navigateTo({
-        url: `/pages/productDetail/main?category=${category}&id=${id}`,
+        url: `/pages/brandAlbum/main?category=${category}&id=${id}`,
       })
+    },
+    handleStar(){
+      this.collected = (this.collected === 0) ? 1 : 0;
+    },
+    handlePhone(){
+    wx.makePhoneCall({
+      phoneNumber: this.detail.phone,
+    })
+  },
+  },
+  onShareAppMessage(res) {
+    if (res.from !== 'button') { 
+      return false
+    };
+    return {
+      title: this.detail.title,
+      path: `/pages/brandDetail/main?category=${this.detail.category}&id=${this.detail.id}`,
+      imageUrl: this.detail.headIcon,
     }
-  }
+  },
  
 }
 </script>
 
 <style lang="less" scoped>
-@import '../../style/base.less';
 .detail-head{
   display: flex;
   flex-direction: column;
   margin: 0rpx;
   padding: 0rpx;
   color: #4f4f4f;
+  letter-spacing: 2rpx;
 }
 .brand-img{
   width: 100%;
@@ -82,7 +100,7 @@ export default {
   }
 }
 .brand-main{
-  padding: 20rpx 40rpx 0rpx 20rpx;
+  padding: 20rpx 30rpx 0rpx 20rpx;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -113,25 +131,23 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding-top: 10rpx;
     .option-item{
       display: flex;
       flex-direction: column;
       text-align: center;
       margin-bottom: 10rpx;
+      width: 80rpx;
     }
     .share{
       background:#fff;
       line-height:60rpx;
-      .share-name{
-        margin-top: -27rpx;
-      }
+      color: #4f4f4f;
+      font-size: 20rpx;
+      padding: 0;
     }
     .share:after{
       border:none;
-    }
-    .option-name{
-      font-size: 20rpx;
-      margin-top: 8rpx;
     }
   }
 }

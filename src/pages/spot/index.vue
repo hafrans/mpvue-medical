@@ -24,12 +24,11 @@ export default {
   data() {
     return {
       spotInfo: [
-        {id: '00', name: '梵高星空艺术馆（东夷小镇官方旗舰店）', category: 0, type: 1, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/food1.jpeg'},
-        {id: '01', name: '孔子学院', category: 0, type: 2, avgPrice: '120.00', score: '5', headIcon: '/static/images/hotel1.jpeg'},
-        {id: '02', name: '金沙滩', category: 0, type: 0, avgPrice: '100.00', score: '3.5', headIcon: '/static/images/food1.jpeg'},
-        {id: '03', name: '东夷公园', category: 0, type: 5, avgPrice: '120.00', score: '3', headIcon: '/static/images/hotel1.jpeg'},
-        {id: '04', name: '东夷博物馆', category: 0, type: 1, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/food1.jpeg'},
-        {id: '05', name: '水上亲子乐园', category: 0, type: 3, avgPrice: '120.00', score: '2.5', headIcon: '/static/images/hotel1.jpeg'},
+        {id: '01', name: '孔子学院', category: 0, type: 2, avgPrice: '120.00', score: '5', headIcon: '/static/images/kong.jpg'},
+        {id: '02', name: '金沙滩', category: 0, type: 0, avgPrice: '100.00', score: '3.5', headIcon: '/static/images/beach1.jpeg'},
+        {id: '03', name: '东夷公园', category: 0, type: 5, avgPrice: '120.00', score: '3', headIcon: '/static/images/hotel2.jpeg'},
+        {id: '04', name: '东夷海洋馆', category: 0, type: 1, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/sea1.jpg'},
+        {id: '05', name: '水上亲子乐园', category: 0, type: 3, avgPrice: '120.00', score: '2.5', headIcon: '/static/images/sea3.jpg'},
       ],
     }
   },
