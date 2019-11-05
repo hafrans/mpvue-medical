@@ -1,9 +1,9 @@
 <template>
   <div class="wrap">
     <div class="main">
-      <div class="search" @click="handleSearch">
+      <!-- <div class="search" @click="handleSearch">
        <van-search placeholder="请输入搜索关键词"  shape="round" placeholder-style="text-align: center"></van-search>
-    </div>
+    </div> -->
     <swiper
       class="swiper"
       indicator-dots="true"
@@ -66,8 +66,8 @@ export default {
         { url: "/static/images/town3.jpg" }
       ],
       navInfo: [
-        {type: 'send-gift', title: '景点门票', color: '#409EFF', url: '../spot/main'},
-        {type: 'wap-home', title: '酒店', color: '#E76262', url: '../hotel/main'},
+        {type: 'send-gift', title: '健康评估', color: '#E76262', url: '../spot/main'},
+        {type: 'wap-home', title: '酒店', color: '#409EFF', url: '../hotel/main'},
         {type: 'invition', title: '民宿', color: '#DD8154', url: '../hotel/main'},
         {type: 'todo-list', title: '攻略', color: '#E3B168', url: '../hotel/main'},
         {type: 'coupon', title: '美食', color: '#F56C6C', url: '../hotel/main'},

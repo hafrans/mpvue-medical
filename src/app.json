@@ -21,7 +21,7 @@
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "智慧小镇",
+        "navigationBarTitleText": "健康养护平台",
         "navigationBarTextStyle": "black"
     },
     "tabBar": {
