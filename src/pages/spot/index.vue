@@ -31,7 +31,11 @@
             
           </div>
         </van-tab>
-        <van-tab title="体检信息上传">提交</van-tab>
+        <van-tab title="体检信息上传">
+          <div class="medicalExam">
+            
+          </div>
+        </van-tab>
       </van-tabs>
     </div>
   </div>

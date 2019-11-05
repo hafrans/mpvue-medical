@@ -29,7 +29,7 @@
       
     </div>
     <div class="divider"></div> 
-    <div class="main">
+    <!-- <div class="main">
       <div class="hot-new-list">
         <block v-for="(item, index) in hotNewInfo" :key="index">
             <div class="hot-new" @click="handleNav(item.url)">
@@ -40,8 +40,8 @@
             </div>
           </block>  
       </div>
-    </div>
-    <div class="divider"></div>
+    </div> -->
+    <!-- <div class="divider"></div> -->
     <div class="main">
       <van-divider contentPosition="center">推荐</van-divider>
       <div class="recommend-list">
@@ -67,13 +67,11 @@ export default {
       ],
       navInfo: [
         {type: 'send-gift', title: '健康评估', color: '#E76262', url: '../spot/main'},
-        {type: 'wap-home', title: '酒店', color: '#409EFF', url: '../hotel/main'},
-        {type: 'invition', title: '民宿', color: '#DD8154', url: '../hotel/main'},
-        {type: 'todo-list', title: '攻略', color: '#E3B168', url: '../hotel/main'},
-        {type: 'coupon', title: '美食', color: '#F56C6C', url: '../hotel/main'},
-        {type: 'shop', title: '购物', color: '#D77820', url: '../hotel/main'},
-        {type: 'smile', title: '休闲娱乐', color: '#DE5C92', url: '../hotel/main'},
-        {type: 'friends', title: '行程定制', color: '#5BA775', url: '../hotel/main'},
+        {type: 'wap-home', title: '健康风险分析', color: '#409EFF', url: '../hotel/main'},
+        
+        {type: 'invition', title: '远程就医', color: '#E3B168', url: '../hotel/main'},
+        {type: 'coupon', title: '中医科普讲堂', color: '#F56C6C', url: '../hotel/main'},
+     
       ],
        hotNewInfo: [
         {type: 'hot', color: '#efefef', src: '/static/images/food1.jpeg', url: '../spot/main'},

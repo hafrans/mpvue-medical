@@ -37,13 +37,13 @@
                 "selectedIconPath": "static/tabs/home-active.png"
             },
             {
-                "text": "订单",
+                "text": "个性化养护",
                 "pagePath": "pages/order/main",
                 "iconPath": "static/tabs/order.png",
                 "selectedIconPath": "static/tabs/order-active.png"
             },
             {
-                "text": "我的",
+                "text": "个人中心",
                 "pagePath": "pages/index/main",
                 "iconPath": "static/tabs/user.png",
                 "selectedIconPath": "static/tabs/user-active.png"
