@@ -5,9 +5,9 @@
       </div>
       <div class="brand-main">
         <div class="basic-info">
-          <div class="info-name">{{detail.name}}</div>
+          <span class="info-name">{{detail.name}}</span>
           <div class="info-score">
-            <van-rate
+            <!-- <van-rate
               :value="detail.score"
               size="15"
               allow-half
@@ -16,8 +16,8 @@
               void-icon="star"
               :change="onScoreChange"
             />
-            <p class="score-value">{{detail.score}}分</p>
-            <div v-if="detail.category === 0 || detail.category === 1" class="price">人均:<b>￥</b>{{detail.avgPrice}}</div>
+            <p class="score-value">{{detail.score}}分</p> -->
+            <!-- <div v-if="detail.category === 0 || detail.category === 1" class="price">人均:<b>￥</b>{{detail.avgPrice}}</div> -->
           </div>  
         </div>
         <div class="option">
@@ -31,14 +31,27 @@
       </div>
       <van-divider />
       <div class="address-contact">
-        <div class="address">
+        <div class="specifications">
+          <span class="title">功能主治</span> {{detail.function}}
+        </div>
+        <div class="specifications">
+          <span class="title">成分</span> {{detail.composition}}
+        </div>
+        <div class="specifications">
+          <span class="title">服法</span> {{detail.instruction}}
+        </div>
+        <div class="specifications">
+          <span class="title">规格</span> {{detail.specifications}}
+        </div>
+        <!-- <div class="address">
           <van-icon name="map-marked" size="20px" color="#afafaf"/>
           <div class="address-detail">{{detail.address}}</div>
         </div>
         <div class="contact" @click="handlePhone">
           <van-icon name="phone" size="20px" color="#F90"/>
-        </div>
+        </div> -->
       </div>
+       
     </div>
 </template>
 
@@ -93,7 +106,8 @@ export default {
 }
 .brand-img{
   width: 100%;
-  height: 300rpx;
+  height: 500rpx;
+  margin-bottom: 20rpx;
   image{
     width: 100%;
     height: 100%;
@@ -105,16 +119,23 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   .basic-info{
+  
     .info-name{
-      font-size: 32rpx;
+      font-size: 35rpx;
       font-weight: 500;
       line-height: 50rpx;
       margin-bottom: 15rpx;
+      background-color: rgb(153,51,51);
+      color: #fff;
+      padding: 20rpx;
+      
     }
     .info-score{
       display: flex;
       flex-direction: row;
       font-size: 24rpx;
+      margin-top: 40rpx;
+      
       .score-value{
         margin-left: 10rpx;
       }
@@ -153,9 +174,23 @@ export default {
 }
 .address-contact{
   padding: 10rpx 40rpx 20rpx 20rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
+  .specifications {
+    font-size: 30rpx;
+    margin-bottom: 30rpx;
+    line-height: 50rpx;
+    .title {
+      background-color: rgb(153,51,51);
+      color: #fff;
+      font-size: 32rpx;
+      padding: 10rpx;
+      margin-right: 15rpx;
+      border-radius: 15rpx;
+    }
+  }
+  
   .address{
     display: flex;
     flex-direction: row;

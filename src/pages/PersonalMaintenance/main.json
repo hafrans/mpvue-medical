@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "药品详情",
+  "navigationBarTitleText": "我的订单",
   "usingComponents": {
       "van-button": "/static/vant/button/index",
       "van-swipe": "/static/vant/swipe-cell/index",

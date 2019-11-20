@@ -78,12 +78,12 @@ export default {
         {type: 'new', color: '#efefef', src: '/static/images/beach1.jpeg', url: '../hotel/main'},
       ],
       recommendInfo: [
-        {id: '30', name: '东夷客栈', category: 2, type: 1, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/kezhan.jpg'},
-        {id: '10', name: 'Tomacado花厨', category: 4, type: 2, avgPrice: '120.00', score: '3.5', headIcon: '/static/images/westfood.jpeg'},
-        {id: '07', name: '东夷海洋馆', category: 0, type: 1, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/sea1.jpg'},
-        {id: '11', name: '胖哥俩蟹肉煲', category: 4, type: 0, avgPrice: '120.00', score: '3', headIcon: '/static/images/pangfood.jpg'},
-        {id: '12', name: '宽板凳火锅', category: 4, type: 3, avgPrice: '100.00', score: '4.5', headIcon: '/static/images/hotpot.jpg'},
-        {id: '20', name: '悦湾大酒店', category: 2, type: 1, avgPrice: '120.00', score: '2.5', headIcon: '/static/images/hotel3.jpeg'},
+        {id: '30', name: '北京同仁堂安宮牛黃丸', type: 1, headIcon: '/static/images/01.jpg', funciton: '清熱解毒，鎮驚開竅的功效。用於熱病，邪入心包，高熱驚厥，神昏譫語。'},
+        {id: '10', name: '同仁牛黃清心丸', headIcon: '/static/images/02.jpg', funciton: '益氣養血、鎮驚安神、化痰熄風。'},
+        {id: '07', name: '同仁大活絡丹', headIcon: '/static/images/03.jpg', funciton: '袪風舒筋、活絡、除濕。用於風寒濕痺引起的肢體疼痛、手足麻木、筋骨不利、行動不便、口眼歪斜、言語不清。'},
+        {id: '11', name: '再造丸', headIcon: '/static/images/04.jpg', funciton: '袪風化痰、活血通絡。適用於風痰阻絡所致的口舌歪斜，手足麻木，疼痛拘攣，言語蹇澀。'},
+        {id: '12', name: '人參再造丸', headIcon: '/static/images/05.jpg', funciton: '活血化瘀、息風通絡、補氣養血。'},
+        {id: '20', name: '極細珍珠粉', headIcon: '/static/images/06.jpg', funciton: '安神定驚，清肝明目，潤膚淡斑。主治驚悸怔忡，心煩失眠等症狀。'},
       ]
     }
   },

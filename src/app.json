@@ -15,7 +15,8 @@
         "pages/makeOrder/main",
         "pages/hotel/main",
         "pages/logs/main",
-        "pages/counter/main"
+        "pages/counter/main",
+        "pages/PersonalMaintenance/main"
 
     ],
     "window": {
@@ -38,7 +39,7 @@
             },
             {
                 "text": "个性化养护",
-                "pagePath": "pages/order/main",
+                "pagePath": "pages/PersonalMaintenance/main",
                 "iconPath": "static/tabs/order.png",
                 "selectedIconPath": "static/tabs/order-active.png"
             },

@@ -2,7 +2,13 @@
   <div class="wrap">
     <brandHeadDetail :detail="detail" />
     <div class="divider"></div>
-    <packageList :packageInfo="packageInfo" :detail="detail"/>
+    <!-- <packageList :packageInfo="packageInfo" :detail="detail"/> -->
+    <div class="attention">
+      注意事项
+      <div v-for="(item,index) in attentionList" :key="index" class="attentionCon">
+        <span class="symbol">>></span>{{item.list}}
+      </div>
+    </div>
     <div class="divider"></div>
     <!-- <div class="comment-conatiner">
       <div class="comment-head">
@@ -66,7 +72,7 @@
       <van-cell title="查看全部用户评价" is-link :value="cellValue" />
     </div> -->
      <CommentList :commentList="commentList" :type="0" :category="detail.category" :id="detail.id" />
-    <div class="divider"></div>
+    <!-- <div class="divider"></div>
      <div class="main">
        <div class="recommend">推荐</div>
       <van-divider />
@@ -76,7 +82,7 @@
             <van-divider />
         </block>
       </div>
-    </div> 
+    </div>  -->
   </div>
 </template>
 
@@ -91,12 +97,14 @@ export default {
     return {
       detail: {
         category: 0,
-        name: '东夷海洋馆',
-        headIcon: '/static/images/sea1.jpg',
+        name: '北京同仁堂安宮牛黃丸',
+        headIcon: '/static/images/01.jpg',
         type: 1,
         id: '00',
-        avgPrice: '120.00', 
-        score: '4.5',
+        specifications: '每盒1蠟殼丸，每蠟殼丸1丸，每丸重3克。',
+        function: '「北京同仁堂安宮牛黃丸」依照清代著名溫病學家吳鞠通《溫病條辯》之古方，配合同仁堂精良炮製方法，產品專門應對突發的心腦血管健康問題，傳承至今，造福多代廣大民眾。 有清熱解毒，鎮驚開竅的功效。用於熱病，邪入心包，高熱驚厥，神昏譫語。',
+        composition: '天然牛黃、天然麝香、珍珠、黃連、黃芩、梔子、朱砂、雄黃、鬱金、冰片、水牛角濃縮粉等名貴藥材。',
+        instruction: '口服，一次1丸，一日一次。 本品連續服用不宜超過三天，或遵醫囑',
         address: '日照市东港区绿舟路东夷小镇B岛北街',
         phone: '17810272102',
       },

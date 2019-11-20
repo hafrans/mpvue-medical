@@ -1,12 +1,15 @@
 <template>
   <div class="brandItem" @click="getDetail(item.category, item.id)">
     <div class="head-icon">
-      <image :src="item.headIcon" alt="头像" mode="aspectFill" />
+      <image :src="item.headIcon" alt="头像" mode="aspectFill"/>
     </div>
     <div class="brand-info">
       <div class="info-detail info-name">{{item.name}}</div>
       <div class="info-detail info-score">
-        <van-rate
+        <div >
+          <span class="function">功能主治</span>: {{item.funciton}}
+        </div>
+        <!-- <van-rate
           readonly
           :value="item.score"
           size="15"
@@ -16,10 +19,10 @@
           void-icon="star"
           :change="onScoreChange"
         />
-        <p class="score-value">{{item.score}}分</p>
+        <p class="score-value">{{item.score}}分</p> -->
       </div>
-      <div class="info-detail info-type">{{brandType[item.category][item.type]}}</div>
-      <div class="info-detail info-price"><b class="price-unit">￥</b>{{item.avgPrice}}</div>
+      <!-- <div class="info-detail info-type">{{brandType[item.category][item.type]}}</div> -->
+      <!-- <div class="info-detail info-price"><b class="price-unit">￥</b>{{item.avgPrice}}</div> -->
     </div>
   </div>
 </template>
@@ -51,11 +54,11 @@ export default {
   height: 200rpx;
   width: 100%;
   .head-icon{
-    width: 200rpx;
+    width: 400rpx;
     height: 200rpx;
     image{
-      width: 100%;
-      height: 100%;
+      width: 300rpx;
+      height: 200rpx;
       border-radius: 10rpx;
     }
   }
@@ -78,6 +81,12 @@ export default {
       flex-direction: row;
       font-size: 24rpx;
       color: #5f5f5f;
+      .function {
+        width: 50rpx;
+        background-color: rgb(153,51,51);
+        color: #fff;
+        font-size: 30rpx;
+      }
       .score-value{
         margin-left: 10rpx;
       }
