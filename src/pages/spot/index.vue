@@ -33,7 +33,9 @@
         </van-tab>
         <van-tab title="体检信息上传">
           <div class="medicalExam">
-            
+            <van-cell-group v-for="(category, cindex) in healthExamItem" :key="cindex" :title="category.name">
+              <van-cell v-for="(item, iindex) in category.children" :key="iindex" :title="item.name" is-link link-type="navigateTo" :url="item.url+'&title='+ item.name+'&desc='+item.desc"/>
+            </van-cell-group>
           </div>
         </van-tab>
       </van-tabs>
@@ -43,6 +45,7 @@
 
 <script>
 import brandItem from '../../components/brandItem.vue'
+import { mapGetters, mapState } from 'vuex'
 export default {
   data() {
     return {
@@ -99,13 +102,15 @@ export default {
           con: '',
         }
       ]
-    }
+    } 
   },
-
   components: {
     brandItem,
   },
-
+  computed: {
+    ...mapGetters(["test"]),
+    ...mapState(["healthExamItem"])
+  },
   methods: {
     onChange(event) {
     this.setData({
